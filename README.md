@@ -1,14 +1,17 @@
-# Template Extension Specification
+# CMIP6 Extension Specification
 
-- **Title:** Template
-- **Identifier:** <https://stac-extensions.github.io/template/v1.0.0/schema.json>
-- **Field Name Prefix:** template
-- **Scope:** Item, Collection
+- **Title:** cmip6
+- **Identifier:** <https://stac-extensions.github.io/cmip6/v1.0.0/schema.json>
+- **Field Name Prefix:** cmip6
+- **Scope:** Item, Collection, Asset
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
-- **Owner**: @your-gh-handles @person2
+- **Owner**: @TomAugspurger
 
-This document explains the Template Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
-This is the place to add a short introduction.
+This document explains the CMIP6 Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
+
+This extensions defines how to encode metadata using the [CMIP6 Controlled Vocabulary](https://github.com/WCRP-CMIP/CMIP6_CVs) in STAC.
+
+When specified in Item properties, the values are assumed to apply to all Assets in that Item.
 
 - Examples:
   - [Item example](examples/item.json): Shows the basic usage of the extension in a STAC Item
@@ -18,36 +21,43 @@ This is the place to add a short introduction.
 
 ## Item Properties and Collection Fields
 
-| Field Name           | Type                      | Description |
-| -------------------- | ------------------------- | ----------- |
-| template:new_field   | string                    | **REQUIRED**. Describe the required field... |
-| template:xyz         | [XYZ Object](#xyz-object) | Describe the field... |
-| template:another_one | \[number]                 | Describe the field... |
+These are the required global attributes from https://github.com/WCRP-CMIP/CMIP6_CVs/blob/master/CMIP6_required_global_attributes.json. See 
+[CMIP6 Global Attributes, DRS, Filenames, Directory Structure, and CV's](http://goo.gl/v1drZl) for more.
+
+|         Field Name         |  Type  |                     Description                     |
+| -------------------------- | ------ | --------------------------------------------------- |
+| cmip6:Conventions          | string | convention version                                  |
+| cmip6:activity_id          | string | activity  identifier(s) (part of DRS)               |
+| cmip6:creation_date        | string | date file was created                               |
+| cmip6:data_specs_version   | string | version identifier                                  |
+| cmip6:experiment           | string | short experiment description                        |
+| cmip6:experiment_id        | string | root experiment identifier (part of DRS)            |
+| cmip6:forcing_index        | number | index for variant of forcing                        |
+| cmip6:frequency            | string | sampling frequency                                  |
+| cmip6:further_info_url     | string | location of documentation                           |
+| cmip6:grid                 | string | grid                                                |
+| cmip6:grid_label           | string | grid identifier (part of DRS)                       |
+| cmip6:initialization_index | number | Index for variant of initialization method          |
+| cmip6:institution          | string | institution name                                    |
+| cmip6:institution_id       | string | institution identifier (part of DRS)                |
+| cmip6:license              | string | license restrictions                                |
+| cmip6:mip_era              | string | activity's associated CMIP cycle (part of DRS)      |
+| cmip6:nominal_resolution   | string | approximate horizontal resolution                   |
+| cmip6:physics_index        | number | index for model physics variant                     |
+| cmip6:product              | string | product type (part of DRS)                          |
+| cmip6:realization_index    | number | realization number                                  |
+| cmip6:realm                | string | realm(s) where variable is defined (part of DRS)    |
+| cmip6:source               | string | full model name / version                           |
+| cmip6:source_id            | string | model identifier (part of DRS)                      |
+| cmip6:source_type          | string | model configuration                                 |
+| cmip6:sub_experiment       | string | description of sub-experiment                       |
+| cmip6:sub_experiment_id    | string | sub-experiment identifier (part of DRS "member_id") |
+| cmip6:table_id             | string | table identifier (part of DRS)                      |
+| cmip6:tracking_id          | string | unique file identifier                              |
+| cmip6:variable_id          | string | variable identifier (part of DRS)                   |
+| cmip6:variant_label        | string | "variant" label (part of DRS "member_id")           |
 
 ### Additional Field Information
-
-#### template:new_field
-
-This is a much more detailed description of the field `template:new_field`...
-
-### XYZ Object
-
-This is the introduction for the purpose and the content of the XYZ Object...
-
-| Field Name  | Type   | Description |
-| ----------- | ------ | ----------- |
-| x           | number | **REQUIRED**. Describe the required field... |
-| y           | number | **REQUIRED**. Describe the required field... |
-| z           | number | **REQUIRED**. Describe the required field... |
-
-## Relation types
-
-The following types should be used as applicable `rel` types in the
-[Link Object](https://github.com/radiantearth/stac-spec/tree/master/item-spec/item-spec.md#link-object).
-
-| Type                | Description |
-| ------------------- | ----------- |
-| fancy-rel-type      | This link points to a fancy resource. |
 
 ## Contributing
 
