@@ -1,67 +1,124 @@
 {
-  "stac_version": "1.0.0",
-  "stac_extensions": [
-    "https://stac-extensions.github.io/template/v1.0.0/schema.json"
-  ],
   "type": "Feature",
-  "id": "item",
-  "bbox": [
-    172.9,
-    1.3,
-    173,
-    1.4
-  ],
+  "stac_version": "1.0.0",
+  "id": "cil-gdpcir-BCC-BCC-CSM2-MR-historical-r1i1p1f1-day",
+  "properties": {
+    "start_datetime": "1950-01-01T12:00:00Z",
+    "end_datetime": "2014-12-31T12:00:00Z",
+    "datetime": null,
+    "cmip6:Conventions": "CF-1.7 CMIP-6.2",
+    "cmip6:activity_id": "CMIP",
+    "cmip6:data_specs_version": "01.00.27",
+    "cmip6:experiment": "all-forcing simulation of the recent past",
+    "cmip6:experiment_id": "historical",
+    "cmip6:forcing_index": 1,
+    "cmip6:frequency": "day",
+    "cmip6:further_info_url": "https://furtherinfo.es-doc.org/CMIP6.BCC.BCC-CSM2-MR.historical.none.r1i1p1f1",
+    "cmip6:grid": "T106",
+    "cmip6:grid_label": "gn",
+    "cmip6:initialization_index": 1,
+    "cmip6:institution": "Beijing Climate Center, Beijing 100081, China",
+    "cmip6:institution_id": "BCC",
+    "cmip6:license": "https://github.com/ClimateImpactLab/downscaleCMIP6/tree/master/data_licenses/BCC-CSM2-MR.txt",
+    "cmip6:mip_era": "CMIP6",
+    "cmip6:nominal_resolution": "100 km",
+    "cmip6:physics_index": 1,
+    "cmip6:product": "model-output",
+    "cmip6:realization_index": 1,
+    "cmip6:realm": "atmos",
+    "cmip6:source": "BCC-CSM 2 MR (2017):   aerosol: none  atmos: BCC_AGCM3_MR (T106; 320 x 160 longitude/latitude; 46 levels; top level 1.46 hPa)  atmosChem: none  land: BCC_AVIM2  landIce: none  ocean: MOM4 (1/3 deg 10S-10N, 1/3-1 deg 10-30 N/S, and 1 deg in high latitudes; 360 x 232 longitude/latitude; 40 levels; top grid cell 0-10 m)  ocnBgchem: none  seaIce: SIS2",
+    "cmip6:source_id": "BCC-CSM2-MR",
+    "cmip6:source_type": "AOGCM",
+    "cmip6:sub_experiment": "none",
+    "cmip6:sub_experiment_id": "none",
+    "cmip6:table_id": "day",
+    "cmip6:variant_label": "r1i1p1f1"
+  },
   "geometry": {
     "type": "Polygon",
     "coordinates": [
       [
         [
-          172.9,
-          1.3
+          180,
+          -90
         ],
         [
-          173,
-          1.3
+          180,
+          90
         ],
         [
-          173,
-          1.4
+          -180,
+          90
         ],
         [
-          172.9,
-          1.4
+          -180,
+          -90
         ],
         [
-          172.9,
-          1.3
+          180,
+          -90
         ]
       ]
     ]
   },
-  "properties": {
-    "datetime": "2020-12-11T22:38:32Z",
-    "template:new_field": "test",
-    "template:xyz": {
-      "x": 1,
-      "y": 2,
-      "z": 3
-    },
-    "template:another_one": [
-      1,
-      2,
-      3
-    ]
-  },
-  "links": [
-    {
-      "href": "https://example.com/examples/item.json",
-      "rel": "self"
-    }
-  ],
+  "links": [],
   "assets": {
-    "data": {
-      "href": "https://example.com/examples/file.xyz",
-      "template:new_field": "test"
+    "pr": {
+      "href": "abfs://cil-gdpcir/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/day/pr/v1.1.zarr",
+      "type": "application/vnd+zarr",
+      "xarray:open_kwargs": {
+        "engine": "zarr",
+        "consolidated": true,
+        "chunks": {},
+        "storage_options": {
+          "account_name": "rhgeuwest"
+        }
+      },
+      "msft:https-url": "https://rhgeuwest.blob.core.windows.net/cil-gdpcir/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/day/pr/v1.1.zarr",
+      "cmip6:creation_date": "2018-11-26T08:55:31Z",
+      "cmip6:tracking_id": "hdl:21.14100/f1c3d03a-7f06-401d-ae18-34b4fd66fa32\\nhdl:21.14100/1fdaa038-3cb6-4cf3-b3b5-4427d91df6b7\\nhdl:21.14100/5829c702-96e8-43f9-baea-a15e1e421b20\\nhdl:21.14100/4ee23ae6-5554-4a68-b3d3-35ca5034a599\\nhdl:21.14100/cdd6c905-069e-4f7e-9b6c-fbd8881eead2\\nhdl:21.14100/d67a31e0-41f3-4ecb-82ad-ef239fa97411\\nhdl:21.14100/742f9050-7f55-47f4-b618-484d9896bdcc",
+      "cmip6:variable_id": "pr"
+    },
+    "tasmax": {
+      "href": "abfs://cil-gdpcir/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/day/tasmax/v1.1.zarr",
+      "type": "application/vnd+zarr",
+      "xarray:open_kwargs": {
+        "engine": "zarr",
+        "consolidated": true,
+        "chunks": {},
+        "storage_options": {
+          "account_name": "rhgeuwest"
+        }
+      },
+      "msft:https-url": "https://rhgeuwest.blob.core.windows.net/cil-gdpcir/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/day/tasmax/v1.1.zarr",
+      "cmip6:creation_date": "2018-11-26T08:55:24Z",
+      "cmip6:tracking_id": "hdl:21.14100/3230cf2a-7ae6-4f0f-9883-eb43d9e6b6f0\\nhdl:21.14100/07cd4c6e-e213-4761-a246-14cc2e4ea831\\nhdl:21.14100/144382b4-b456-412d-a41d-182394d594a7\\nhdl:21.14100/4ad391b6-0fd4-4104-a9e0-34934e1c9c50\\nhdl:21.14100/88c4e4f5-3456-47f5-ad1b-de03a099bf0a\\nhdl:21.14100/e08d6e54-a003-4c10-9bab-3b89327cf631\\nhdl:21.14100/c2f14eff-36a9-4e20-b724-0d05c36020ac",
+      "cmip6:variable_id": "tasmax"
+    },
+    "tasmin": {
+      "href": "abfs://cil-gdpcir/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/day/tasmin/v1.1.zarr",
+      "type": "application/vnd+zarr",
+      "xarray:open_kwargs": {
+        "engine": "zarr",
+        "consolidated": true,
+        "chunks": {},
+        "storage_options": {
+          "account_name": "rhgeuwest"
+        }
+      },
+      "msft:https-url": "https://rhgeuwest.blob.core.windows.net/cil-gdpcir/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/day/tasmin/v1.1.zarr",
+      "cmip6:creation_date": "2018-11-26T08:55:22Z",
+      "cmip6:tracking_id": "hdl:21.14100/3567f8a6-fce6-4a8c-be49-0903fc1bde15\\nhdl:21.14100/13800857-15ce-49c2-be09-dd4953701b37\\nhdl:21.14100/491ac3f2-b741-49b6-a91b-b1a94a11adf6\\nhdl:21.14100/55278df4-f706-4eaf-8071-cecafbbe05a7\\nhdl:21.14100/3d0f1e84-abef-465a-baf6-c034b2fe5a8e\\nhdl:21.14100/7f07a699-aa4c-4b0e-8f4c-e6903a077c5f\\nhdl:21.14100/c6d90be4-6240-4415-8f38-776ae79c3a7d",
+      "cmip6:variable_id": "tasmin"
     }
-  }
+  },
+  "bbox": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/cmip6/v1.0.0/schema.json"
+  ]
 }

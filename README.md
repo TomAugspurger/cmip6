@@ -21,7 +21,7 @@ When specified in Item properties, the values are assumed to apply to all Assets
 
 ## Item Properties and Collection Fields
 
-These are the required global attributes from https://github.com/WCRP-CMIP/CMIP6_CVs/blob/master/CMIP6_required_global_attributes.json. See 
+These are the [required global attributes](https://github.com/WCRP-CMIP/CMIP6_CVs/blob/master/CMIP6_required_global_attributes.json). See 
 [CMIP6 Global Attributes, DRS, Filenames, Directory Structure, and CV's](http://goo.gl/v1drZl) for more.
 
 |         Field Name         |  Type  |                     Description                     |

@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://stac-extensions.github.io/template/v1.0.0/schema.json#",
-  "title": "Template Extension",
-  "description": "STAC Template Extension for STAC Items and STAC Collections.",
+  "$id": "https://stac-extensions.github.io/cmip6/v1.0.0/schema.json#",
+  "title": "CMIP6 Extension",
+  "description": "STAC CMIP6 Extension for STAC Items and STAC Collections.",
   "oneOf": [
     {
       "$comment": "This is the schema for STAC Items. Remove this object if this extension only applies to Collections.",
@@ -26,7 +26,33 @@
                 {
                   "$comment": "Require fields here for Item Properties.",
                   "required": [
-                    "template:new_field"
+                    "cmip6:Conventions",
+                    "cmip6:activity_id",
+                    "cmip6:data_specs_version",
+                    "cmip6:experiment",
+                    "cmip6:experiment_id",
+                    "cmip6:forcing_index",
+                    "cmip6:frequency",
+                    "cmip6:further_info_url",
+                    "cmip6:grid",
+                    "cmip6:grid_label",
+                    "cmip6:initialization_index",
+                    "cmip6:institution",
+                    "cmip6:institution_id",
+                    "cmip6:license",
+                    "cmip6:mip_era",
+                    "cmip6:nominal_resolution",
+                    "cmip6:physics_index",
+                    "cmip6:product",
+                    "cmip6:realization_index",
+                    "cmip6:realm",
+                    "cmip6:source",
+                    "cmip6:source_id",
+                    "cmip6:source_type",
+                    "cmip6:sub_experiment",
+                    "cmip6:sub_experiment_id",
+                    "cmip6:table_id",
+                    "cmip6:variant_label"
                   ]
                 },
                 {
@@ -70,7 +96,6 @@
             {
               "$comment": "Require fields here for Collections (top-level).",
               "required": [
-                "template:new_field"
               ]
             },
             {
@@ -152,56 +177,77 @@
         "stac_extensions": {
           "type": "array",
           "contains": {
-            "const": "https://stac-extensions.github.io/template/v1.0.0/schema.json"
+            "const": "https://stac-extensions.github.io/cmip6/v1.0.0/schema.json"
           }
         }
       }
     },
     "require_any_field": {
-      "$comment": "Please list all fields here so that we can force the existance of one of them in other parts of the schemas.",
+      "$comment": "Please list all fields here so that we can force the existence of one of them in other parts of the schemas.",
       "anyOf": [
-        {"required": ["template:new_field"]},
-        {"required": ["template:xyz"]},
-        {"required": ["template:another_one"]}
+                    {"required": ["cmip6:Conventions"]},
+                    {"required": ["cmip6:activity_id"]},
+                    {"required": ["cmip6:data_specs_version"]},
+                    {"required": ["cmip6:experiment"]},
+                    {"required": ["cmip6:experiment_id"]},
+                    {"required": ["cmip6:forcing_index"]},
+                    {"required": ["cmip6:frequency"]},
+                    {"required": ["cmip6:further_info_url"]},
+                    {"required": ["cmip6:grid"]},
+                    {"required": ["cmip6:grid_label"]},
+                    {"required": ["cmip6:initialization_index"]},
+                    {"required": ["cmip6:institution"]},
+                    {"required": ["cmip6:institution_id"]},
+                    {"required": ["cmip6:license"]},
+                    {"required": ["cmip6:mip_era"]},
+                    {"required": ["cmip6:nominal_resolution"]},
+                    {"required": ["cmip6:physics_index"]},
+                    {"required": ["cmip6:product"]},
+                    {"required": ["cmip6:realization_index"]},
+                    {"required": ["cmip6:realm"]},
+                    {"required": ["cmip6:source"]},
+                    {"required": ["cmip6:source_id"]},
+                    {"required": ["cmip6:source_type"]},
+                    {"required": ["cmip6:sub_experiment"]},
+                    {"required": ["cmip6:sub_experiment_id"]},
+                    {"required": ["cmip6:table_id"]},
+                    {"required": ["cmip6:variant_label"]}
       ]
     },
     "fields": {
       "$comment": "Add your new fields here. Don't require them here, do that above in the corresponding schema.",
       "type": "object",
       "properties": {
-        "template:new_field": {
-          "type": "string"
-        },
-        "template:xyz": {
-          "type": "object",
-          "required": [
-            "x",
-            "y",
-            "z"
-          ],
-          "properties": {
-            "x": {
-              "type": "number"
-            },
-            "y": {
-              "type": "number"
-            },
-            "z": {
-              "type": "number"
-            }
-          }
-        },
-        "template:another_one": {
-          "type": "array",
-          "items": {
-            "type": "number"
-          }
-        }
+        "cmip6:Conventions": {"type": "string"},
+        "cmip6:activity_id": {"type": "string"},
+        "cmip6:data_specs_version": {"type": "string"},
+        "cmip6:experiment": {"type": "string"},
+        "cmip6:experiment_id": {"type": "string"},
+        "cmip6:forcing_index": {"type": "string"},
+        "cmip6:frequency": {"type": "string"},
+        "cmip6:further_info_url": {"type": "string"},
+        "cmip6:grid": {"type": "string"},
+        "cmip6:grid_label": {"type": "string"},
+        "cmip6:initialization_index": {"type": "string"},
+        "cmip6:institution": {"type": "string"},
+        "cmip6:institution_id": {"type": "string"},
+        "cmip6:license": {"type": "string"},
+        "cmip6:mip_era": {"type": "string"},
+        "cmip6:nominal_resolution": {"type": "string"},
+        "cmip6:physics_index": {"type": "string"},
+        "cmip6:product": {"type": "string"},
+        "cmip6:realization_index": {"type": "string"},
+        "cmip6:realm": {"type": "string"},
+        "cmip6:source": {"type": "string"},
+        "cmip6:source_id": {"type": "string"},
+        "cmip6:source_type": {"type": "string"},
+        "cmip6:sub_experiment": {"type": "string"},
+        "cmip6:sub_experiment_id": {"type": "string"},
+        "cmip6:table_id": {"type": "string"},
+        "cmip6:variant_label": {"type": "string"}
       },
       "patternProperties": {
-        "^(?!template:)": {
-          "$comment": "Above, change `template` to the prefix of this extension"
-        }
+        "^(?!cmip6:)": {}
       },
       "additionalProperties": false
     }
