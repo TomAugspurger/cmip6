@@ -95,8 +95,7 @@
           "allOf": [
             {
               "$comment": "Require fields here for Collections (top-level).",
-              "required": [
-              ]
+              "required": []
             },
             {
               "$ref": "#/definitions/fields"
@@ -237,17 +236,18 @@
         "cmip6:physics_index": {"type": "number"},
         "cmip6:product": {"type": "string"},
         "cmip6:realization_index": {"type": "number"},
-        "cmip6:realm": {"type": "string"},
+        "cmip6:realm": {"type": "array", "items": {"type": "string"}},
         "cmip6:source": {"type": "string"},
         "cmip6:source_id": {"type": "string"},
-        "cmip6:source_type": {"type": "string"},
+        "cmip6:source_type": {"type": "array", "items": {"type": "string"}},
         "cmip6:sub_experiment": {"type": "string"},
         "cmip6:sub_experiment_id": {"type": "string"},
         "cmip6:table_id": {"type": "string"},
         "cmip6:variant_label": {"type": "string"},
         "cmip6:creation_date": {"type": "string"},
         "cmip6:tracking_id": {"type": "string"},
-        "cmip6:variable_id": {"type": "string"}
+        "cmip6:variable_id": {"type": "string"},
+        "cmip6:version": {"type": "string"}
       },
       "patternProperties": {
         "^(?!cmip6:)": {}
