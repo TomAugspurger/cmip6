@@ -1,3 +1,12 @@
+# 🛑 DEPRECATED / SUPERSEDED 🛑
+
+**This repository has been superseded and is no longer actively maintained.**
+
+The project has been migrated and all **active development continues in the new repository:**
+
+➡️ **https://github.com/stac-extensions/cmip6** ⬅️
+
+Please direct all new issues, feature requests, and contributions to the linked repository.
 # CMIP6 Extension Specification
 
 - **Title:** cmip6
